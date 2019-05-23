@@ -13,6 +13,7 @@ Robot[] robots = new Robot[5];
 		robots[i] = new Robot();
 	}
 		//4. make each robot start at the bottom of the screen, side by side, facing up
+	
 
 	//5. use another for loop to iterate through the array and make each robot move 
 	//   a random amount less than 50.
