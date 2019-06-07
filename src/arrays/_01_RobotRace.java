@@ -13,6 +13,7 @@ public class _01_RobotRace {
 		// 3. use a for loop to initialize the robots.
 		for (int i = 0; i < robots.length; i++) {
 			robots[i] = new Robot();
+			robots[i].setSpeed(20);
 		}
 		// 4. make each robot start at the bottom of the screen, side by side, facing up
 		for (int i = 0; i < robots.length; i++) {
@@ -24,22 +25,23 @@ public class _01_RobotRace {
 
 		// 6. use a while loop to repeat step 5 until a robot has reached the top of the
 		// screen.
-		Boolean chance = true;
+		boolean chance = true;
+		Random bob = new Random();
 		while (chance) {
-			Random bob = new Random();
 			for (int i = 0; i < robots.length; i++) {
-				robots[i].move(bob.nextInt(50));
+				robots[i].move(bob.nextInt(100));
 				if (robots[i].getY() <= 0) {
 					chance = false;
+
+					// 7. declare that robot the winner and throw it a party!
+					System.out.println("Congrats, robot" + (i+1));
 					break;
 				}
 			}
-
 		}
-		// 7. declare that robot the winner and throw it a party!
-		System.out.println("Congrats Robot");
 		// 8. try different races with different amounts of robots.
 
 		// 9. make the robots race around a circular track.
+
 	}
 }
