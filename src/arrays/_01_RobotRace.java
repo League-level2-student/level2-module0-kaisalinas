@@ -29,7 +29,7 @@ public class _01_RobotRace {
 		Random bob = new Random();
 		while (chance) {
 			for (int i = 0; i < robots.length; i++) {
-				robots[i].move(bob.nextInt(100));
+				robots[i].move(bob.nextInt(10));
 				if (robots[i].getY() <= 0) {
 					chance = false;
 
