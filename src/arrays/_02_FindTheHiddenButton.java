@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 public class _02_FindTheHiddenButton implements ActionListener{
 	JFrame window;
 	JPanel panel;
-	
+	Random rarr = new Random();
 	//1. create an array of JButtons. Don't initialize it yet.
 	JButton[] buttons;
 	//2 create an int variable called hiddenButton
@@ -45,21 +45,23 @@ public class _02_FindTheHiddenButton implements ActionListener{
 				buttons[i] = new JButton();
 			
 			//7. add the ActionListener to each JButton
-				
+				buttons[i].addActionListener(this);
 			//8. add each JButton to the panel
+				panel.add(buttons[i]);
 			}
 		//9 add the panel to the window
-		
+		window.add(panel);
 		//10. call setExtendedState(JFrame.MAXIMIZED_BOTH) on your JFrame object.
-		
+		window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//11. set the JFrame to visible.
-		
+		window.setVisible(true);
 		//12. Give the user the instructions for the game.
-		
+		JOptionPane.showMessageDialog(null, "Try and click the correct button!");
 		//13. initialize the hiddenButton variable to a random number less than the int created int step 3
 		
-		//14. Set the text of the JButton located at hiddenButton the read "ME"
-
+		hiddenButton = rarr.nextInt(num);
+		//14. Set the text of the JButton located at hiddenButton and read "ME"
+		
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this
 		
