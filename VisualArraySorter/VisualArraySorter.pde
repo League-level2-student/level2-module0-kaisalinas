@@ -2,12 +2,9 @@
 int[] ints;
 void setup() {
   //2. set the size of your window
-size(600, 600);
-  //  if you are using Processing 3, you cannot use variables
-  //  because the developers don't know how programming is supposed to work.
-
+size(1600, 1000);
   //3. initialize your array with the built in width variable
-  ints = new int[width];
+  
   //4. initialize the ints in the array with random numbers
   //   from 0 to the built in height variable
 for(int i = 0; i<ints.length; i++){
@@ -28,11 +25,11 @@ background(50,200,155);
   //   the width is 1 (one)
   //   the height is negative the value of the element at the current index of the array
   for(int i = 0; i<ints.length; i++){
-  
+  rect(i, height, 1, -ints[i]);
   }
 
   //9. call the stepSort method
-
+  stepSort(ints);
   //10. extract the code that randomizes the array into a method.
 
   //11. call the method you made in step 10 when the mouse is pressed
